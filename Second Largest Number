@@ -1,0 +1,9 @@
+def getSecondOrderElements(n: int,  a: [int]) -> [int]:
+    # Write your code here.
+    minval=min(a)
+    maxval=max(a)
+    a.remove(minval)
+    a.remove(maxval)
+    b=[max(a),min(a)]
+    return b
+    pass
