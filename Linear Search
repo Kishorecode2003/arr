@@ -1,0 +1,8 @@
+def search(self,arr, x):
+        #Your code here
+        n=len(arr)
+        for i in range(n):
+            if(arr[i]==x):
+                return i
+        else:
+            return -1
