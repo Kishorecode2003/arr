@@ -1,0 +1,16 @@
+ i = 0
+    
+    # Outer loop iterates through the array until i reaches n
+    while i < n:
+        left = i  # Start index of the current subarray to be reversed
+        right = min(i + k - 1, n - 1)  # End index of the current subarray to be reversed
+        
+        # Inner loop reverses the subarray [left, right]
+        while left < right:
+            # Swap elements at indices left and right
+            arr[left], arr[right] = arr[right], arr[left]
+            left += 1  # Move left index forward
+            right -= 1  # Move right index backward
+        
+        # Move to the next subarray by incrementing i by k
+        i += k
