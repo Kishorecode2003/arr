@@ -1,0 +1,11 @@
+def get_min_max(self, arr):
+        n=len(arr)
+        minimum=arr[0]
+        maximum=arr[0]
+        for i in range(n):
+            if(arr[i]<minimum):
+                minimum=arr[i]
+            if(arr[i]>maximum):
+                maximum=arr[i]
+        result=[minimum,maximum]
+        return result
