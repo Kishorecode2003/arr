@@ -1,0 +1,15 @@
+def minAnd2ndMin(a, n):
+    smallest = float('inf')
+    ssmallest = float('inf')
+    
+    for i in range(n):
+        if a[i] < smallest:
+            ssmallest = smallest
+            smallest = a[i]
+        elif a[i] < ssmallest and a[i]!=smallest:
+            ssmallest = a[i]
+    
+    if ssmallest != float('inf'):
+        return [smallest, ssmallest]
+    else:
+        return [-1, -1]
