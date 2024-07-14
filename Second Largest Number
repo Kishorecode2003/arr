@@ -7,3 +7,4 @@ def getSecondOrderElements(n: int,  a: [int]) -> [int]:
     b=[max(a),min(a)]
     return b
     pass
+Not suitable for array with duplicates
