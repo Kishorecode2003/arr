@@ -1,0 +1,23 @@
+def countDistinct(self, A, N, K):
+        # Code here
+        result = []  # List to store results (number of distinct elements in each window)
+        freq = {}    # Dictionary to track frequency of elements in the current window
+    
+        for i in range(N):
+        # Add the current element to the frequency dictionary
+            if A[i] in freq:
+                freq[A[i]] += 1
+            else:
+                freq[A[i]] = 1
+        
+        # Once the window size K is reached
+            if i >= K - 1:
+            # Append the count of distinct elements in the current window to result
+                result.append(len(freq))
+            
+            # Remove the element going out of the window from frequency dictionary
+                freq[A[i - K + 1]] -= 1
+                if freq[A[i - K + 1]] == 0:
+                    del freq[A[i - K + 1]]
+    
+        return result
