@@ -1,0 +1,9 @@
+def hasArrayTwoCandidates(self,arr, x):
+		# code here
+		n=len(arr)
+		seen=set()
+		for i in arr:
+		    if x-i in seen:
+		        return True
+		    seen.add(i)
+	    return False
