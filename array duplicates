@@ -1,0 +1,10 @@
+ def duplicates(self, n : int, arr : List[int]) -> List[int]:
+        # code here
+        nums=[]
+        for i in range(0,n):
+            for j in range(i+1,n):
+                if(arr[i]==arr[j]):
+                    nums.append(arr[i])
+        else:
+            nums.append('-1')
+        return nums
