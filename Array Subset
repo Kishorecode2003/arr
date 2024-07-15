@@ -1,0 +1,18 @@
+def isSubset( a1, a2, n, m):
+    freq={}
+    freq1={}
+    for i in range(n):
+        if a1[i] in freq:
+            freq[a1[i]]+=1
+        else:
+            freq[a1[i]]=1
+    for i in range(m):
+        if a2[i] in freq1:
+            freq1[a2[i]]+=1
+        else:
+            freq1[a2[i]]=1 
+    for key in freq1:
+        if key not in freq or freq1[key] > freq[key]:
+            return "No"
+    
+    return "Yes"
